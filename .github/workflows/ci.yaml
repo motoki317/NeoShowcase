@@ -7,7 +7,7 @@ on:
   pull_request:
 
 env:
-  ICCHECK_FROM: "main"
+  ICCHECK_FROM: "refs/heads/main"
   ICCHECK_TO: "HEAD"
 
 jobs:
