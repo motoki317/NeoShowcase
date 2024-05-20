@@ -25,4 +25,7 @@ jobs:
         if: github.ref == 'refs/heads/main'
         run: echo "ICCHECK_FROM=HEAD~" >> "$GITHUB_ENV"
       - run: go install github.com/salab/iccheck@latest
+      - run: ls -lha .git
+      - run: ls -lha .git/refs/heads
+      - run: ls -lha .git/refs/remotes/origin
       - run: iccheck --from "$ICCHECK_FROM" --to "$ICCHECK_TO" --format github
